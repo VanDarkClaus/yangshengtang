@@ -1,0 +1,132 @@
+@import "../module/header.scss";
+@import "../module/footer.scss";
+@import "../module/shopItem.scss";
+$font-color:#595757;
+main{
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    width: 1170px;
+    color:$font-color;
+}
+main{
+    color: $font-color;
+    text-decoration: none;
+}
+main a:hover{
+    text-decoration: underline;
+    color: red;
+}
+main .store_search{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+main .store_search .mod_search{
+    display: flex;
+    margin-right: 18px;
+}
+main .store_search .mod_search input{
+  padding-left: 12px;
+  box-sizing: border-box;
+  width: 300px;
+  height: 35px;
+  outline: none;
+}
+main .store_search .mod_search button{
+    box-sizing: border-box;
+    border: 1px solid #a4a4a4;
+    width: 45px;
+    height: 35px;
+    outline: none;
+    background: url("../../images/search.png") no-repeat center;
+}
+main .store_search .hotwords b{
+    color:$font-color;
+}
+main .store_search .hotwords a{
+    color:$font-color;
+    text-decoration: none;
+    margin-left: 10px;
+}
+main .store_search .mod_search_match{
+    display: none;
+    position: absolute;
+}
+main .store_search .mod_search_match ul{
+    background:white;
+    color: $font-color;
+    border: 1px solid #a4a4a4;
+    width: 343px;
+}
+main .store_search .mod_search_match ul li{
+    padding: 2px 10px;
+}
+main .main-head{
+    display: flex;
+    margin-top: 23px;
+}
+main .main-head .s_classify{
+    width: 250px;
+    height: 540px;
+    background-color: white;
+    border: 1px solid #dadada;
+}
+main .main-head .s_classify dl{
+    width: 210px;
+    margin: auto;
+    border-top: 1px solid #dadada;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-left: 19px;
+    margin-right: 19px;  
+}
+main .main-head .s_classify dl dt{
+    font-size: 14px;
+    width: 100%;
+    color: black;
+    font-weight: 900;
+}
+main .main-head .s_classify dl dd{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+main .main-head .s_classify dl dd a{
+    color: $font-color;
+    text-decoration: none;
+}
+main .main-head .s_classify .tit{
+    color: black;
+    font-weight: 900;
+    margin: 15px;
+}
+main .main-head .s_classify dl dd a:hover{
+    text-decoration: underline;
+    color: red;
+}
+main .main-head .rightImg{
+    height: 542px;
+    width: calc(1170-250)px;
+}
+main .main-head .rightImg img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+main .main-banner{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+main .main-banner img{
+    width: 32%;
+    height: 100%;
+}
+main .shopItem{
+    background-color:white; 
+}

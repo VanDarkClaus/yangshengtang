@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../css/login/login.css"/>
+    <link rel="stylesheet" type="text/css" href="../images/icon/iconfont.css"/>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+    	<div class="main">
+			<div class="main1">
+				<h2>养生堂会员登录</h2>
+				<p>如果还不是会员&nbsp;<a href="/html/register.html">注册</a></p>
+			</div>
+			<nav>
+				<div class="right">
+					<p>还不是养生堂会员，辛苦注册一下吧！</p>
+				    <span>
+				    <span id="reg"></span>
+				    </span>
+				    <li>
+				    	<i class="iconfont icon-shouji"></i>
+				        <input type="text" name="" id="tel" value=""placeholder="请输账号" />
+				    </li>
+				     <li>
+				    	<i class="iconfont icon-yuechi"></i>
+				        <input type="psw" name="" id="psw" value=""placeholder="请输入密码" />
+				     </li>
+				    <li>
+				    	<i class="iconfont icon-yanzhengma"></i>
+				        <input type="text" name="" id="yzm" value=""placeholder="请输入验证码" />
+				        <div><img id="yzmImg" src="" alt=""></div>
+				    </li>
+				    <li>
+				        <input type="checkbox" name="" id="agree" />
+				        <p>下次自动登录</p>
+				        <a href="">忘记密码</a>
+				    </li>
+				    <button id="loginBtn">立即登录</button>
+				    <p>如果还不是会员，请选&nbsp;<a href="">注册</a></p>
+				</div>
+			</nav>
+		</div>
+    </main>
+    <div id="footer"></div>
+    <script src="/libs/require.js" data-main="/js/login.js"></script>
+</body>
+</html>

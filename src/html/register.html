@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../css/registercss/register.css"/>
+    <link rel="stylesheet" type="text/css" href="../images/icon/iconfont.css"/>
+</head>
+<body>
+	<div id="header"></div>
+	<main>
+		<div class="main">
+			<div class="main1">
+				<h2>养生堂会员注册</h2>
+				<p>已是会员，请&nbsp;<a href="/html/login.html">登录</a></p>
+			</div>
+			<nav>
+				<div class="right">
+					<p>还不是养生堂会员，辛苦注册一下吧！</p>
+				    <span>
+				    <span id="reg"></span>
+				    </span>
+				    	
+				    <li>
+				    	<i class="iconfont icon-shouji"></i>
+				        <input type="text" name="" id="tel" placeholder="请输入手机号" />
+				    </li>
+				    <li>
+				    	<i class="iconfont icon-yanzhengma"></i>
+				        <input type="text" name="" id="yzm" placeholder="请输入验证码" />
+				        <div><img id="yzmImg" src="" alt=""></div>
+				    </li>
+				     <li>
+				    	<i class="iconfont icon-yanzhengma"></i>
+				        <input type="text" name="" id="short" placeholder="6位短信验证码" />
+				         <button>获取验证码</button>
+				     </li>
+				     <li>
+				    	<i class="iconfont icon-yuechi"></i>
+				        <input type="password" id="psw11" placeholder="长度不能少于6位，且不含特殊字符"/>
+				    </li>
+				    <li>
+				    	<i class="iconfont icon-yuechi"></i>
+				        <input type="password" name="" id="psw12" placeholder="确认密码" />
+				    </li>
+				    <li>
+				        <input type="checkbox" name="" id="agree" />
+				        <p>同意养生堂 《用户使用协议》</p>
+				    </li>
+				    <button id="regBtn">立即注册</button>
+				</div>
+			</nav>
+		</div>
+	</main>
+	<div id="footer"></div>
+    <script src="../libs/require.js" data-main="../js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+@import "../module/footer.scss";
+$color1:grey;
+$fontcolor:#979797;
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    background-color:#f7f7f7; 
+}
+header{
+    padding-top: 33px;
+    width: 1170px;
+    margin:0 auto;
+    height: 73px;
+    display: flex;
+    justify-content: space-between;
+}
+header span{
+    width: 503px;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background: url(/images/cart-right.png) no-repeat center ;
+}
+main{
+    width: 1170px;
+    margin:0 auto;
+}
+main .static div:nth-child(1){
+    height: 148px;
+    width: 100%;
+    background: url("/images/cart.png") no-repeat center;
+}
+main .static .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .static .txt ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .static .txt ul li{
+    font-size: 14px;
+    margin-bottom:15px; 
+    margin-right: 20px;
+}
+main .static .txt ul a{
+    font-size: 14px;
+    color: #59577a;
+    text-decoration: none;
+}
+#footer{
+    box-sizing: border-box;
+    width: 100%;
+}
+main .static{
+    display: none;
+}
+nav{
+    width: 1170px;
+    margin:0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .cartList{
+    display: flex;
+    flex-direction: column;
+    color: $fontcolor;
+}
+main .cartList .c{
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 27px;
+    border: 1px solid $color1;
+    margin: 0;
+    font-size: 13px;
+}
+main .cartList .c li{
+    width: 114px;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid $color1;
+    border-right: 1px solid $color1;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+main .cartList .c li:nth-child(1){
+   border-left: none;
+    border-right: none;
+}
+main .cartList .c li:nth-child(2){
+    width: 480px;
+    border-left: none;
+    border-right: none;
+ }
+ main .cartList .c li:last-child{
+    border-right: none;
+ }
+ main .cartList .c .d{
+     display: flex;
+     width: 200px;
+ }
+ main .cartList .goods_item{
+     height: 110px;
+     background-color:white;
+     margin: 0; 
+ }
+ main .cartList .goods_item img{
+     display: flex;
+     width: 80px;
+     height: 80px;
+ }
+ main .cartList .goods_item .intro_inner{
+     display: flex;
+ }
+ main .cartList .goods_item li{
+     padding-top: 15px;
+ }
+ main .cartList .goods_item li a{
+     color: $fontcolor;
+     text-decoration: none;
+ }
+ main .cartList .goods_item .nums{
+     width: 45px;
+     height: 20px;
+     box-sizing: border-box;
+     border:1px solid $color1; 
+     text-align: center;
+ }
+ main .cartList .goods_item .inner{
+     display: flex;
+ }
+ main .cartList .goods_item .inner span{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     width: 22px;
+     height: 20px;
+     box-sizing: border-box;
+     border: 1px solid $color1;
+ }
+ main .cartList .goods_item .inner i{
+     position: absolute;
+     width:8px ;
+     height: 2px;
+     background-color:black; 
+ }
+ main .cartList .goods_item .inner u{
+     width: 2px;
+     height: 8px;
+     background-color:black; 
+     position: absolute;
+ }
+ main .cartList .b{
+     margin-top: 17px;
+     width: 100%;
+     display: flex;
+     height: 44px;
+     background-color: #e9e9e9; 
+     align-items: center;
+     font-size: 13px;
+     position: relative;
+ }
+ main .cartList .b li:nth-of-type(1){
+     margin-left: 20px;
+ }
+ main .cartList .b li:nth-of-type(2){
+    margin-left: 20px;
+}
+main .cartList .b li:nth-of-type(3){
+    margin-left: 15px;
+}
+main .cartList .b li:nth-of-type(4){
+    margin-left: 490px;
+}
+main .cartList .b li:nth-of-type(5){
+    margin-left: 65px;
+}
+main .cartList .b li:nth-of-type(6){
+    font-size: 18px;
+    color: red;
+    margin-left: 5px;
+}
+main .cartList .b li:nth-of-type(7){
+    position: absolute;
+    right: 0;
+}
+main .cartList .b li:nth-of-type(7) button{
+    font-size: 30px;
+    background-color: red;
+    width: 160px;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 5px;
+}
+main .cartList .b li:nth-of-type(4) em{
+    color: red;
+    font-size:18px;
+    font-style: normal; 
+}
+main .cartList a{
+    color: $fontcolor;
+    text-decoration: none;
+    font-size: 13px;
+}
+main .cartList a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="../css/cartcss/cart.css"/>
+</head>
+<body>
+	<header>
+		<a href="/index.html">
+			<img src="../images/header.jpg" alt="">
+		</a>
+		<span></span>
+	</header>
+		<nav>
+				<h2>我的购物车</h2>
+				<span id="welcome">欢迎你</span>
+		</nav>
+	 <main>
+		 <div class="static" id="static">
+			 <div></div>
+			 <div class="txt">
+                    <h4>您的购物车还是空的，赶紧行动吧</h4>
+                    <ul>
+                        <li>马上去  <a href="/html/shop.html">在线商城</a> 购物吧</li>
+                        <li>或者看看  <a href="/html/cart.html">我已买到的商品</a> </li>
+                    </ul>
+            </div>
+		 </div>
+		 <div class="cartList" id="cartList">
+				
+				<ul class="c">
+						<li class="col col_1"><label class="check_inner"><input class="allCheck" type="checkbox"> 全选</label></li>
+						<li class="col col_2">商品</li>
+						<li class="col col_3">规格</li>
+						<li class="col col_4">单价</li>
+						<li class="col col_5">数量</li>
+						<li class="col col_6">金额</li>
+						<li class="col col_7">操作</li>
+				</ul>
+				<script type="text/html" id="myCart">
+					{{each list item}}
+				<ul class="goods_item c" data-id={{item.id}}>
+						<li><div class="check_inner"><input class="aCheck" type="checkbox" ></div></li>
+						<li>
+							<div class="intro_inner">
+								<div class="img"><img src={{item.imgArr[0].img}} alt=""></div>
+								<p><a class="d">【官网正品】{{item.title}}</a></p>
+							</div>
+						</li>
+						<li></li>
+						<li><div>￥<span class="price" style="color:#c9151d">{{item.price}}</span><br><del>￥{{item.price}}</del></div></li>
+						<li>
+							<div class="inner">
+									<span class="minus"><i></i></span>
+									<input class="nums"  value={{item.num}}>
+									<span class="plus"><i></i><u></u></span>
+							</div>
+						</li>
+						<li ><div class="inner">￥<b class="sum" style="color:#c9151d">{{item.num*item.price}}</b></div></li>
+						<li>
+						  <div>
+							<a class="aDel" data-id="ff8080816735a1700169e7028d981998" data-psid="ff808081587006530158e146b1fc0329:" href="javascript:;">删除</a><br>
+							<a class="add_fav" data-pid="ff808081587006530158e146b1fc0329" href="javascript:;">收藏</a>
+						  </div>
+						</li>
+				</ul>
+				{{/each}}
+				<ul class="b">
+						<li><input class="allCheck" type="checkbox"></li>
+						<li><a id="allDel" href="javascript:;">删除</a> </li>
+						<li><a href="/html/shop.html">继续购物</a> </li>
+						<li>已选 <em id="totalNum"></em> 件</li>
+						<li>合计（不含运费）:</li>
+						<li>￥<span id="totalPrice"></span> </li>
+						<li><button>确认结算</button></li>
+				</ul>
+			</script>
+		 </div>
+		 
+	 </main>
+	 <div id="footer"></div>
+	 <script src="/libs/require.js" data-main="/js/cart.js"></script>
+  
+	</body>
+</html>

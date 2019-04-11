@@ -1,0 +1,109 @@
+$topColor:#c9151d;
+$vw:1/1266*100%;
+$fontColor:#929292;
+$footColor:#f5f5f5;
+footer a{
+    color: $fontColor;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.footer3 a{
+    color: $fontColor;
+    text-decoration: none;
+}
+.footer3 a:hover{
+    text-decoration: underline;
+}
+footer{
+    width: 100%;
+    border-top: 3px solid $topColor;
+    background-color:$footColor ;
+}
+footer .footer{
+    display: flex;
+    width: 100%;
+}
+footer h4{
+    color: black;
+    font-weight: normal;
+}
+footer .footer1{
+    margin-top: 25px;
+    width: 948*$vw;
+    height: 172px;
+    display: flex;
+}
+footer .footer1 ul{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid $fontColor;
+    box-sizing: border-box;
+    padding-left: 8%;
+}
+footer .footer1 ul li{
+    color: $fontColor;
+    font-size: 12px;
+    margin-bottom: 13px;
+}
+footer .footer1 ul li:nth-child(2){
+    margin-top: 22px;
+}
+footer .footer2{
+    margin-top: 25px;
+    width: 318*$vw;
+}
+footer .footer1 ul:nth-child(1){
+    background:url(../../images/footer-1.png) no-repeat 20px 10px;
+}
+footer .footer1 ul:nth-child(2){
+    background:url(../../images/footer-2.png) no-repeat 20px 10px;
+}
+footer .footer1 ul:nth-child(3){
+    background:url(../../images/footer-3.png) no-repeat 20px 10px;
+}
+footer .footer1 ul:nth-child(4){
+    background:url(../../images/footer-4.png) no-repeat 20px 10px;
+}
+footer .footer2 ul{
+    width: 100%;
+    display: flex;
+}
+footer .footer2 ul li{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 115px;
+}
+footer .footer2 ul li:nth-child(1){
+    background: url(../../images/qr_code.png) no-repeat center;
+    background-size:60px 60px ;
+}
+footer .footer2 ul li:nth-child(2){
+    background: url(../../images/qr_code_fw.png) no-repeat center;
+    background-size:60px 60px ;
+}
+footer .footer2 ul li:nth-child(3){
+    background: url(../../images/qr_code_wb.png) no-repeat center;
+    background-size:60px 60px ;
+}
+.footer3{
+    padding-top: 40px;
+    width: 1175*$vw;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    font-size: 12px;
+    background-color:$fontColor ;
+    background: url(../../images/piDQeUxJon8d.png) no-repeat center;
+}
+.footer3 a{
+    color: black;
+     font-size: 12px;
+}
+#footer{
+    background-color: $footColor;
+}

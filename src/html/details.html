@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情</title>
+    <link rel="stylesheet" type="text/css" href="../css/details/details.css"/>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <div class="breadcrumbs">
+                <a href="/html/shop.html">在线商城</a>
+                <span class="sep">/</span>
+                <a href="/pc/goods/list">产品列表</a>
+                <span class="sep">/</span>
+                <span id="product_name_path">【官网正品】</span>
+        </div>
+        <!-- 左边图片 -->
+        <div class="header" id="append">
+        <script type="text/html" id="tempDetails">
+            <div class="left">
+                <div class="view_bd">
+                    <img class="zoom-img" src={{res_body.data.imgArr[0].img}} data-zoom-image={{res_body.data.imgArr[0].bigImg}}/>
+                </div>
+                <div class="view_thumbs" id="gal1">
+                    <ul class="view-ul">
+                        {{each res_body.data.imgArr item}}
+                           <li class="current">
+                                <a href="#" data-image={{item.img}} data-zoom-image={{item.bigImg}}>
+                                <img class="s" src={{item.img}} />
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <!-- 右边详情 -->
+            <div class="right">
+                <h1>【官网正品】{{res_body.data.title}}</h1>
+                <p>{{res_body.data.details}}</p>
+                <div class="price">
+                        <div class="metatit">会员价</div>
+                        <div class="propcont" id="price_area">
+                            <strong class="vip">¥<!-- 会员价 -->{{res_body.data.price}}</strong>
+                            <p>建议零售价：<del class="old_price">¥<!-- 建议零售价 -->{{res_body.data.price}}</del></p>
+                            <p class="save_price">节省: ￥<!-- 节省金额 -->0</p>
+                        </div>
+                </div>
+                <div class="number">
+                   <p>数量选择</p>
+                   <span id="reduce"><i></i></span>
+                   <input type="text" id="num_shop" value="1">
+                   <span id="addShop"><i></i><u></u></span>
+                   <p class="tips">剩余库存(<em id="num">{{res_body.data.num}}</em>)件</p>
+                </div>
+                <div class="btn">
+                    <button id="buy">立即购买</button>
+                    <button id="addCart">加入购物车</button>
+                </div>
+            </div>
+        </script>
+    </div>
+    <div id="detailsImg">
+    <script type="text/html" id="temp2">
+        {{each res_body.data.detailsImg item}}
+            <img class="img" src={{item.img}} alt="">
+        {{/each}}
+    </script>
+    </div>
+    </main>
+    <div id="footer"></div>
+    <script src="../libs/require.js" data-main="../js/details.js"></script>
+</body>
+</html>

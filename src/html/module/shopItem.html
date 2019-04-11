@@ -1,0 +1,30 @@
+<script type="text/html" id="template">
+      <div class="item-p">
+            <p>美丽自己&nbsp;&nbsp;<span>Beauty for you</span></p>
+            <div class="sort">
+                <a href="" class="upSort">价格升序</a>
+                <a href="" class="downSort">价格降序</a>
+            </div>
+            <a href="">更多&nbsp;></a>
+      </div>
+      <div class="templateMain">
+          <div>
+              <img src={{res_body.res_img}} alt="">
+          </div>
+          <ul id="templateItem" class="templateItem">
+              {{each res_body.data item}}
+                 <li data-id={{item.id}}>
+                      <div class="divImg">
+                              <img class="imgBtn" src= {{item.img}}/>
+                      </div>
+                      <div>
+                          <p class="tempTitle"><a href="/html/details.html?id={{item.id}}"> {{ item.title }}</a> </p>
+                          <p class="tempDetail"> {{ item.details }} </p>
+                          <p class="tempPrice">会员价:￥{{item.price}}</p>
+                          <p class="priceAgo">零售价:￥{{item.price}}</p>
+                      </div>
+                  </li>
+              {{/each}}
+          </ul>
+      </div>
+</script>

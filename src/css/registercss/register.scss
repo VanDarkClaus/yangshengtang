@@ -1,0 +1,183 @@
+@import "../module/header.scss";
+@import "../module/footer.scss";
+$color:#dfdfdf;
+a{
+    text-decoration: none;
+}
+main{
+    width: 100%;
+    height:490px ;
+    margin-top: 70px;
+    background-color:#f5f5f5 ;
+    list-style: none;
+}
+main .main{
+    width: 1170px;
+    height: 490px;
+    margin: auto;
+}
+main .main .main1{
+    display: flex;
+    align-items: center;
+    height: 95px;
+}
+main a{
+    color: black;
+    text-decoration: none;
+}
+main a:hover{
+    text-decoration: underline;
+    color: red;
+}
+main .main nav{
+    width: 100%;
+    height: 395px;
+    background: white url(../../images/YC4gRKyKVbNa.jpg) no-repeat left top;
+}
+main .main nav .right{
+    float: right;
+    margin-right: 65px;
+    width: 285px;
+    height: 100%;
+}
+main .main nav .right p{
+    margin-top: 15px;
+    font-size: 12px;
+}
+main .main nav .right > span{
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 13px;
+    
+}
+main .main nav .right > span >span{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    color: red;
+    border: 1px solid red;
+    background: #ffeeee;
+    padding-left: 10px;
+    box-sizing: border-box;
+
+}
+main .main nav .right li:nth-of-type(1){
+    width: 100%;
+    height: 35px;
+    border: 1px solid $color;
+    position: relative;
+}
+main .main nav .right i{
+    width: 15%;
+    position: absolute;
+}
+
+main .main nav .right li i{
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px!important;
+    margin-top: 7px;
+    border-right: 1px solid $color;
+}
+main .main nav .right li{
+    margin-bottom: 13px;
+}
+main .main nav .right li:nth-of-type(1) input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+main .main nav .right li:nth-of-type(2){
+    width: 100%;
+    height: 35px;
+    border: none;
+    position: relative;
+}
+main .main nav .right li:nth-of-type(2) input{
+    border: 1px solid $color;
+    width: 176px;
+    height: 100%;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+main .main nav .right li:nth-of-type(3){
+    width: 100%;
+    height: 35px;
+    border: none;
+    position: relative;
+}
+main .main nav .right li:nth-of-type(3) input{
+    border: 1px solid $color;
+    width: 137px;
+    height: 100%;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+main .main nav .right li:nth-of-type(3) button{
+    width: 122px;
+    height: 100%;
+    background-color:#f7f7f7 ;
+    border: 1px solid $color;
+    outline-style: none;
+}
+main .main nav .right li:nth-of-type(4){
+    width: 100%;
+    height: 35px;
+    border: 1px solid $color;
+    position: relative;
+}
+main .main nav .right li:nth-of-type(4) input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+main .main nav .right li:nth-of-type(5){
+    width: 100%;
+    height: 35px;
+    border: 1px solid $color;
+    position: relative;
+}
+main .main nav .right li:nth-of-type(5) input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+main .main nav .right li:nth-of-type(6){
+    width: 100%;
+    height: 35px;
+    border: none;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+main .main nav .right li:nth-of-type(6) p{
+    margin-top: -2px;
+}
+main .main nav .right > button{
+    background-color:#c9151d ;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 35px;
+    margin-top: -6px;
+    outline: none;
+}
+#yzmImg{
+    width: 105px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
