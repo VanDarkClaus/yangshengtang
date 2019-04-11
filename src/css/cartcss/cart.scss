@@ -221,3 +221,39 @@ main .cartList a{
 main .cartList a:hover{
     text-decoration: underline;
 }
+.welcome{
+    border: 1px solid #ededed;
+    background-color: white;
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#welcome{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.welcome img{
+    width: 15px;
+    height: 15px;
+}
+.welcome .user{
+    border:1px solid #ededed;
+}
+.welcome .user p{
+   margin-top:50px;
+}
+.welcome .user a{
+    width: 100px;
+    height: 30px;
+    background: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    margin-top: 40px;
+    transform: translate(-50%)
+}

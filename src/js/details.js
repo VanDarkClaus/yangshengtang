@@ -66,7 +66,7 @@ require(["require.config"],function(){
 				})
 			} 
 			reAddCart(){
-				new addCart($(".btn"),$("#addCart"),this.res)
+				new addCart($(".btn"),"#addCart",this.res)
 			}
 		}
 		new Details();

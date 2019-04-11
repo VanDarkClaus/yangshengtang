@@ -1,9 +1,11 @@
 require(["require.config"],function(){
-	require(["jquery","footer","template"],function($,footer,template){
+	require(["jquery","footer","template","modelFrame"],function($,footer,template){
 		new footer();
 		class Cart{
             constructor(){
 				this.init();
+				this.settle();
+				this.model();
 			}
 			init(){
 				this.n=0;
@@ -35,18 +37,18 @@ require(["require.config"],function(){
 			}
 			entrust(){//+-事件委托
 				$("#cartList").on("click",".plus",e=>{//+按钮
-					this.cart=localStorage.getItem("cart");
+					let cart=localStorage.getItem("cart");
 					var target=e.target;
 					let tr=target.parentNode.parentNode.parentNode;
-					this.cart=JSON.parse(this.cart);
+					cart=JSON.parse(cart);
 					let ul=target.parentNode.parentNode.parentNode;
-					this.cart.some((item,index)=>{
+					cart.some((item,index)=>{
 						this.index=index;
 					  return item.id==ul.getAttribute("data-id");
 				   })
-				   this.cart[this.index].num=++ul.querySelector(".nums").value;;//缓存+1//文本+1
-				   tr.querySelector(".sum").innerText=tr.querySelector(".nums").value*tr.querySelector(".price").innerText;
-				   localStorage.setItem("cart",JSON.stringify(this.cart));
+				   cart[this.index].num=++ul.querySelector(".nums").value;;//缓存+1//文本+1
+				   tr.querySelector(".sum").innerHTML=tr.querySelector(".nums").value*tr.querySelector(".price").innerHTML;
+				   localStorage.setItem("cart",JSON.stringify(cart));
 				   this.totalPrice();
 				})
 
@@ -60,11 +62,12 @@ require(["require.config"],function(){
 						this.index=index;
 					  return item.id==ul.getAttribute("data-id");
 				   })
-				   if(--ul.querySelector(".nums").value < 0){
+				   if(--ul.querySelector(".nums").value < 1){
 					ul.querySelector(".nums").value=0;
+						$(target.parentNode.parentNode.parentNode).find(".aDel").trigger("click")
 				   }
 				   this.cart[this.index].num=ul.querySelector(".nums").value;//缓存+1//文本+1
-				   tr.querySelector(".sum").innerText=tr.querySelector(".nums").value*tr.querySelector(".price").innerText;
+				   tr.querySelector(".sum").innerHTML=tr.querySelector(".nums").value*tr.querySelector(".price").innerHTML;
 				localStorage.setItem("cart",JSON.stringify(this.cart));
 				    this.totalPrice();
 				 })
@@ -161,6 +164,38 @@ require(["require.config"],function(){
 					$("#cartList").hide();
 					localStorage.removeItem("cart");
 				}
+			}
+			settle(){
+				$(".settle").on("click",()=>{
+					location.href="/html/settle.html"
+				})
+			}
+			model(){
+				let user=localStorage.getItem("login");
+				let str;
+				if(user){//如果本地缓存存在
+					user=JSON.parse(user);
+          str=`<div class="user">
+					<h3>欢迎你</h3>
+					<p>${user.user}</p>
+					</div>`
+				}else{//如果本地缓存不存在
+					 str=`<div class="user">
+					 <h3>你还未登录</h3>
+					 <a href="/html/login.html">登录</a>
+					 </div>`
+				}
+				$("#welcome").model(str,
+				{
+					width:"270px",
+					height:"170px",
+					position:"absolute",
+				  top:"29px",
+				  right:"0px",
+					background:"white",
+					"z-index":"10000",
+					"text-align":"center"
+				})
 			}
 		}
 		new Cart();
