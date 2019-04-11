@@ -68,7 +68,7 @@ require(["require.config"],function(){
 				})
 			}
 			addToCart(){//加入购物车功能 
-				new addCart($(".divImg"),$(".imgBtn"),"",true)
+				new addCart($(".divImg"),".imgBtn","",true)
 			  }
 			
 		}

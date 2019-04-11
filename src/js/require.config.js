@@ -12,7 +12,8 @@ require.config({
         "shopItem":"js/module/shopItem",
         "yzmmode":"js/module/yzmmode",
         "addCart":"js/module/addCart",
-        "fly":"libs/jquery-plugins/jquery.fly.min"
+        "fly":"libs/jquery-plugins/jquery.fly.min",
+        "modelFrame":"js/module/modelFrame"
     },
     //垫片，不满足amd规范，但是又依赖于另外的模块
     shim:{
@@ -20,6 +21,9 @@ require.config({
           deps:["jquery"]
       },
       "fly":{
+          deps:["jquery"]
+      },
+      "modelFrame":{
           deps:["jquery"]
       }
     }
