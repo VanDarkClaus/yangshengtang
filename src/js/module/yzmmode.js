@@ -20,7 +20,7 @@ define([
                 url:url.yzmUrl,
                 success:(res)=>{
                     this.yzmRes=res;
-                    // console.log(this.yzmRes)
+                    console.log(this.yzmRes.showapi_res_body.text)
                     $("#yzmImg").attr("src",res.showapi_res_body.img_path)
                   
                 }
