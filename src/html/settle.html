@@ -13,7 +13,58 @@
             <a href="/index.html"></a>
             <a href="javascript:;"></a>
         </header>
-
+        <nav>
+            <h3>订单结算</h3>
+            <div>
+                <div class="welcome">
+                    <img class="img" src="/images/tou.png" alt="">
+                    <span id="welcome">我的账号<span>
+                    <img class="img" src="/images/sanjiao.png" alt="">
+                </div>
+                <div>
+                    <img class="img" src="/images/icon-2.png" alt="">
+                    <span>我的购物车</span>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="div1">
+                <p>收货地址</p>
+                <a>管理收货地址</a>
+            </div>
+            <div class="div2">
+                <img src="/images/address.png" alt="">
+            </div>
+            <div class="div4">
+                <h4>商品清单</h4>
+                <a href="/html/cart.html">返回购物车</a>
+            </div>
+            <div class="div5" id="shopHtml">
+                    <ul>
+                        <li>商品名称</li>
+                        <li>规格</li>
+                        <li>价格</li>
+                        <li>数量</li>
+                    </ul>
+                <script type="html/text" id="shopJs">
+                    {{each cart item}}
+                    <ul>
+                            <li>
+                                <img src={{item.imgArr[0].img}}/>
+                                <p>【官网正品】{{item.title}}</p>
+                            </li>
+                            <li>-</li>
+                            <li>{{item.price}}</li>
+                            <li>{{item.num}}</li>
+                        </ul>
+                    {{/each}}
+                </script>
+            </div>
+            <h4>扫码领红包完成支付</h4>
+            <div class="div3">
+                <img id="hongbao" src="/images/hongbao.png" alt="">
+            </div>
+        </main>
     </div>
     <div id="footer"></div>
     <script src="/libs/require.js" data-main="/js/settle.js"></script>

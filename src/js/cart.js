@@ -1,5 +1,5 @@
 require(["require.config"],function(){
-	require(["jquery","footer","template","modelFrame"],function($,footer,template){
+	require(["jquery","footer","template","modelFrame"],function($,footer,template,modelFrame){
 		new footer();
 		class Cart{
             constructor(){
@@ -167,35 +167,15 @@ require(["require.config"],function(){
 			}
 			settle(){
 				$(".settle").on("click",()=>{
-					location.href="/html/settle.html"
+					if(localStorage.getItem("login")){
+						location.href="/html/settle.html"
+					}else{
+						alert("你还未登录")
+					}
 				})
 			}
-			model(){
-				let user=localStorage.getItem("login");
-				let str;
-				if(user){//如果本地缓存存在
-					user=JSON.parse(user);
-          str=`<div class="user">
-					<h3>欢迎你</h3>
-					<p>${user.user}</p>
-					</div>`
-				}else{//如果本地缓存不存在
-					 str=`<div class="user">
-					 <h3>你还未登录</h3>
-					 <a href="/html/login.html">登录</a>
-					 </div>`
-				}
-				$("#welcome").model(str,
-				{
-					width:"270px",
-					height:"170px",
-					position:"absolute",
-				  top:"29px",
-				  right:"0px",
-					background:"white",
-					"z-index":"10000",
-					"text-align":"center"
-				})
+			model(){//插入登录模态框
+				new modelFrame(".welcome");
 			}
 		}
 		new Cart();
